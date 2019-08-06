@@ -8,3 +8,7 @@ edition = "2018"
 
 [dependencies]
 telegram-bot = "0.6"
+antidote = "1.0"
+tokio-core = "0.1"
+error-chain = "0.11"
+futures = "0.1"

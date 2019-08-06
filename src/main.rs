@@ -1,12 +1,12 @@
 mod storage;
 
+mod updates;
+
 use storage::config_loader;
 
 extern crate futures;
 extern crate telegram_bot;
 extern crate tokio_core;
-
-use std::env;
 
 use futures::Stream;
 use tokio_core::reactor::Core;

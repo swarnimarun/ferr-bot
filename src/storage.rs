@@ -7,7 +7,7 @@ pub mod config_loader {
     // config.json will hold the configs of the bot
     
     #[allow(dead_code)]
-    pub(crate) fn get_key() -> Result<String, Box<Error>> {
+    pub(crate) fn get_key() -> Result<String, Box<dyn Error>> {
         // TODO: implement the function
         Ok("placeholder for the key".to_string())
     }
