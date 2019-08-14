@@ -8,6 +8,8 @@ extern crate futures;
 extern crate telegram_bot;
 extern crate tokio_core;
 
+use updates::messages::message_handler;
+
 use futures::Stream;
 use tokio_core::reactor::Core;
 use telegram_bot::*;
@@ -27,12 +29,8 @@ fn main() {
 
             if let MessageKind::Text {ref data, ..} = message.kind {
                 // Print received text message to stdout.
-                println!("<{}>: {}", &message.from.first_name, data);
-
-                // Answer message with "Hi".
-                api.spawn(message.text_reply(
-                    format!("Hi, {}! You just wrote '{}'", &message.from.first_name, data)
-                ));
+                let response = message_handler::handle_text_messages(&message.from, data);
+                api.spawn(message.text_reply(response));
             }
         }
 
