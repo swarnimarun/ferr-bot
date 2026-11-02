@@ -1,0 +1,5 @@
+{"services":[
+  {"id":"media","lab":"home","connector":"mock","status":"healthy"},
+  {"id":"backups","lab":"remote","connector":"mock","status":"degraded"},
+  {"id":"dashboard","lab":"garage","connector":"mock","status":"offline"}
+]}

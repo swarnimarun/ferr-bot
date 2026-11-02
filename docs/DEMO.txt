@@ -1,0 +1,9 @@
+SIMULATED inventory — no hosts contacted
+home/media: Healthy
+remote/backups: Degraded
+garage/dashboard: Offline
+
+Confirm SIMULATED restart of home.media? No host will be contacted. Expires at Unix 220. Do nothing to cancel.
+SIMULATED restart recorded for home.media. No host contacted.
+2 simulated_completed at=101 action=simulate_restart service=home.media
+1 requested at=100 action=simulate_restart service=home.media

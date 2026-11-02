@@ -1,14 +1,14 @@
 [package]
 name = "ferr-bot"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Swarnim Arun <swarnimarun11@gmail.com>"]
-edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+edition = "2021"
+license = "MIT"
+description = "Owner-only Telegram homelab control foundation"
 
 [dependencies]
-telegram-bot = "0.6"
-antidote = "1.0"
-tokio-core = "0.1"
-error-chain = "0.11"
-futures = "0.1"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "rustls-tls"] }
+rusqlite = { version = "0.37", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"

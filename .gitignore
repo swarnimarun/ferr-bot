@@ -1,3 +1,7 @@
 /target
 **/*.rs.bk
 SECRET_KEY
+.env
+*.sqlite*
+/state/
+config/inventory.json
